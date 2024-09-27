@@ -1,6 +1,5 @@
 (function() {
   "use strict";
-
   /**
    * Mobile nav toggle
    */
