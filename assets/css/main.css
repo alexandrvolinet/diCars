@@ -128,7 +128,7 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   line-height: 0;
   transition: 0.3s;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .header .topbar .social-links a:hover {
@@ -597,6 +597,51 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Cards Section
+--------------------------------------------------------------*/
+.cardContainer {
+  display: flex; 
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cards .card {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  border-radius: 5px;
+  padding: 40px;
+  border: 1px black solid;
+  display: flex;  
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 5px 20px;
+  width: calc(33.333% - 40px); /* Three cards per row, subtracting 2 * 20px margin */
+  text-align: center;
+}
+
+.cards .card h4 {
+  color: color-mix(in srgb, var(--heading-color), transparent 20%);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+}
+
+
+@media (max-width: 991px) {
+  .cards .card {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards .card {
+    width: calc(100% - 40px);
+  }
+}
+
+
+/*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
@@ -782,10 +827,9 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
+  padding: 60px 0 0 0 !important;
   width: 100%;
-  min-height: 100vh;
   position: relative;
-  /* padding: 160px 0 100px 0; */
   display: flex;
   align-items: center;
   justify-content: center;
