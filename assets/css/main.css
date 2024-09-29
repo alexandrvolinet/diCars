@@ -156,6 +156,22 @@ h6 {
   text-transform: uppercase;
   color: var(--heading-color);
 }
+@media (max-width: 767px) {
+  .header .topbar .social-links i {
+    font-size: 24px;
+    margin: 0 5px;
+  }
+  .header .topbar {
+    height: 80px;
+  }
+  .header .topbar .social-links {
+    margin-top: 10px;
+  }
+
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -182,7 +198,6 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 20px 15px;
-    margin-left: 2px;
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -827,7 +842,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 60px 0 0 0 !important;
+  padding: 90px 0 0 0 !important;
   width: 100%;
   position: relative;
   display: flex;
@@ -881,44 +896,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  padding-bottom: 10px;
-}
-
-.about .content ul i {
-  font-size: 1.25rem;
-  margin-right: 4px;
-  color: var(--accent-color);
-}
-
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-
-.about-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.about-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /*--------------------------------------------------------------
 # cars Section
 --------------------------------------------------------------*/
