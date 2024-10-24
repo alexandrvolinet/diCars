@@ -47,6 +47,9 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+*{
+  list-style: none;
+}
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -182,6 +185,10 @@ h6 {
     padding: 0;
   }
 
+  #navmenu{
+    display: flex;
+  }
+
   .navmenu ul {
     margin: 0;
     padding: 0;
@@ -283,14 +290,22 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
+
+
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
+    margin: 10px 10px 0 0 ;
     cursor: pointer;
     transition: color 0.3s;
   }
+
+  #navmenu{
+    display: flex !important;
+    flex-direction: row-reverse;
+  }
+
 
   .navmenu {
     padding: 0;
@@ -324,6 +339,15 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+  }
+
+ .a {
+    color: var(--nav-color) !important;
+  }
+
+  .ul {
+    background-color:black;
+    height: 100px;
   }
 
   .navmenu a i,
@@ -361,13 +385,18 @@ h6 {
   }
 
   .navmenu .dropdown ul {
-    position: static;
-    display: none;
+    margin: 0;
+    padding: 0;
+    color: white !important;
+    background: var(--background-color);
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    transition: 0.3s;
     z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+    display: none;
   }
 
   .navmenu .dropdown ul ul {
@@ -1223,4 +1252,12 @@ section,
 .portfolio-details .portfolio-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.mobile-nav-active .a {
+  display: none;
+}
+
+body:not(.mobile-nav-active) .a {
+  display: flex;
 }
